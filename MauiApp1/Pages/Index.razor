@@ -1,0 +1,22 @@
+﻿@page "/"
+@inject IJSRuntime JsRuntime;
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+
+
+
+// THIS WILL BE TRIGGERED FROM JS
+@code {
+    [JSInvokable]
+    public static Task<string> ReturnArrayAsync()
+    {
+         return Task.FromResult("Event triggered from C# Method!!!!");
+        //return Task.FromResult(new int[] { 1, 2, 3 });
+    }
+}

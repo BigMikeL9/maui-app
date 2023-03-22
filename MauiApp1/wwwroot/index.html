@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script id="shim-exports">var exports = typeof module !== 'undefined' ? module.exports : {};</script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+    <title>Report Builder</title>
+    <script type="module" crossorigin src="./index-5d53cd63.js"></script>
+    <link rel="stylesheet" href="./style-038727b3.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+
+    <script src="_framework/blazor.webview.js" autostart="false"></script>
+     <!--<script src="_framework/blazor.webassembly.js"></script>-->
+    <script>
+        window.returnArrayAsync = () => {
+            DotNet.invokeMethodAsync('MauiApp1', 'ReturnArrayAsync')
+                .then(data => {
+                    console.log(data);
+                });
+        };
+    </script>
+  </body>
+</html>
